@@ -17,15 +17,14 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Title of your feature
+Feature: Tariff
   I want to use this template for my feature file
 
   @tag1
-  Scenario: to test add customer functionality
-    Given the user is in add customer page 
-    Given the user click on add feature
-    When the user fill the valid details
-    When the user clicks the submit button
-    Then I validate the outcomes
-    
-  
+  Scenario: to add tariff plan
+  Given the user is in add tariff plan
+  When the user fill valid details
+  When the user click submit button
+  Then I validate the outcome
+
+ 

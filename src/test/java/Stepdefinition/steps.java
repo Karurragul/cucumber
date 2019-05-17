@@ -98,18 +98,50 @@ public class steps {
 	*/ 
 	//* 1d map
 	
-	@When("the user fill valid details{string},{string},{string},{string},{string},{string},{string}")
+	//***scenario outline
+	/*@When("the user fill valid details{string},{string},{string},{string},{string},{string},{string}")
 	public void the_user_fill_valid_details(String monthlyrental, String freelocalmin, String freeinternationalmin, String freesmspack, String localperminutescharge, String Internationalperminutes, String SMSpercharges ) 
 		 { 
-		driver.findElement(By.id("rental1")).sendKeys(monthlyrental);
-        driver.findElement(By.xpath("//input[@placeholder='Free Local Minutes']")).sendKeys(freelocalmin);
-        driver.findElement(By.xpath("//input[@placeholder='Free International Minutes']")).sendKeys(freeinternationalmin);
+	  driver.findElement(By.id("rental1")).sendKeys(monthlyrental);
+      driver.findElement(By.xpath("//input[@placeholder='Free Local Minutes']")).sendKeys(freelocalmin);
+      driver.findElement(By.xpath("//input[@placeholder='Free International Minutes']")).sendKeys(freeinternationalmin);
   	  driver.findElement(By.xpath("//input[@placeholder='Free SMS Pack']")).sendKeys(freesmspack);
   	  driver.findElement(By.xpath("//input[@placeholder='Local Per Minutes Charges']")).sendKeys(localperminutescharge);
   	  driver.findElement(By.xpath("//input[@placeholder='Inter. Per Minutes Charges']")).sendKeys(Internationalperminutes);
   	  driver.findElement(By.xpath("//input[@placeholder='SMS Per Charges']")).sendKeys(SMSpercharges);	 
 	}	
+	*/	
+	//* scenario outline
+	
+	/*///***2d list
+		@When("the user fill valid details")
+		public void the_user_fill_valid_details(DataTable details) {
+			List<List<String>> cuDetail = details.asLists(String.class);
+		  driver.findElement(By.id("rental1")).sendKeys(cuDetail.get(1).get(0));
+	      driver.findElement(By.xpath("//input[@placeholder='Free Local Minutes']")).sendKeys(cuDetail.get(1).get(3));
+	      driver.findElement(By.xpath("//input[@placeholder='Free International Minutes']")).sendKeys(cuDetail.get(1).get(4));
+	  	  driver.findElement(By.xpath("//input[@placeholder='Free SMS Pack']")).sendKeys(cuDetail.get(3).get(5));
+	  	  driver.findElement(By.xpath("//input[@placeholder='Local Per Minutes Charges']")).sendKeys(cuDetail.get(0).get(4));
+	  	  driver.findElement(By.xpath("//input[@placeholder='Inter. Per Minutes Charges']")).sendKeys(cuDetail.get(2).get(6));
+	  	  driver.findElement(By.xpath("//input[@placeholder='SMS Per Charges']")).sendKeys(cuDetail.get(2).get(4));	 
+		}
 		
+		//* 2d list
+	*/	
+	///***2d map
+		@When("the user fills the valid details")
+		public void the_user_fills_valid_details(DataTable details) {
+	    	List<Map<String, String>> cuDetail  = details.asMaps(String.class,String.class);
+		  driver.findElement(By.id("rental1")).sendKeys(cuDetail.get(1).get("rental1"));
+		  driver.findElement(By.xpath("//input[@placeholder='Free Local Minutes']")).sendKeys(cuDetail.get(1).get("freelocalmin"));
+		  driver.findElement(By.xpath("//input[@placeholder='Free International Minutes']")).sendKeys(cuDetail.get(1).get("freeinternationalmin"));
+		  driver.findElement(By.xpath("//input[@placeholder='Free SMS Pack']")).sendKeys(cuDetail.get(3).get("freesmspack"));
+		  driver.findElement(By.xpath("//input[@placeholder='Local Per Minutes Charges']")).sendKeys(cuDetail.get(0).get("localperminutescharge"));
+		  driver.findElement(By.xpath("//input[@placeholder='Inter. Per Minutes Charges']")).sendKeys(cuDetail.get(2).get("Internationalperminutes"));
+		  driver.findElement(By.xpath("//input[@placeholder='SMS Per Charges']")).sendKeys(cuDetail.get(2).get("SMSpercharges"));	 
+				}
+				
+				//* 2d map
 	
 	@When("the user click submit button")
 	public void the_user_click_submit_button() {

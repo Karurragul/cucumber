@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions (features="src/test/resources/",glue="Stepdefinition", plugin="html:target")
+@CucumberOptions(features="src/test/resources/2dMap.feature",glue="Stepdefinition",plugin="html:target")
 public class testRunner {
 
 }

@@ -1,7 +1,8 @@
   Feature: Tariff
   I want to use this template for my feature file
 
-  @tag1
+ 
+  
   Scenario: to add tariff plan
   Given the user is in add tariff plan
   When the user fill valid details

@@ -1,0 +1,7 @@
+com\stepdefinition\Hooks.class
+com\stepdefinition\AddTariffplan.class
+com\stepdefinition\TestRunner.class
+com\stepdefinition\TestReRunner.class
+com\stepdefinition\AddCustomer.class
+com\stepdefinition\AddTariffMap.class
+com\stepdefinition\ScenarioOutlineTask.class

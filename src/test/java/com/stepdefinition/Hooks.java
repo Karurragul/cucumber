@@ -6,8 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class Base {
-	
+public class Hooks {
 	
 	public static WebDriver driver;
 	@Before
@@ -16,15 +15,11 @@ public class Base {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\\\Users\\\\user\\\\eclipse-workspace\\\\ragul\\\\Selenium\\\\driver\\\\chromedriver.exe");
 		driver = new ChromeDriver();
-
 	}
 	
 	@After
-	
 	public void afterClass() {
 		driver.close();
 		driver.quit();
-
 	}
-
 }

@@ -1,3 +1,1 @@
-src/test/resources/feature/AddTrafScenario.feature:15:16:17
-src/test/resources/feature/AddTrafstep.feature:11:33
-src/test/resources/feature/cucumber00.feature:7
+src/test/resources/feature/AddTarPlan.feature:6
